@@ -29,7 +29,7 @@ $(document).ready(function(){
 	var question4 = {
 	    pic: "img/gspic4.jpg",
 	    ask: "Which U.S. President owned a German Shepherd?"
-	    choices: ["Bill Clinton", "Richard Nixon", "Lyndon B. Johnson", "Franklin D. Roosevelt"],
+	    choices: ["git pushBill Clinton", "Richard Nixon", "Lyndon B. Johnson", "Franklin D. Roosevelt"],
 	    correntans: ["Franklin D. Roosevelt"],
 	    info: "Roosevelt owned a German Shepherd named Major. FDR was a great dog lover and had several pets throughout his life and presidential terms. Major does not seem to have been the most disciplined of dogs though. He once bit the visiting British Prime Minister Ramsey McDonald! Thankfully, no international crisis between the U.S. and Great Britain ensued."
 

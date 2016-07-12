@@ -55,9 +55,11 @@ h1 {
 
 #gspic1 {
 	max-width: 35%;
+	padding-top: 150px;
 }
 
 #thoughtbubble {
-	max-width: 25%
+	max-width: 25%;
+	vertical-align: top;
 
 }
