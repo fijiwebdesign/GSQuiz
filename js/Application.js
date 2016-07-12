@@ -1,8 +1,11 @@
 
 $(document).ready(function(){
 
+
 	$("#play_area").hide();
 	$("#done").hide();
+
+	
 
 
 	/* ----- when shepherd clicked, play_area id shown, question_area and header classes shown, others hidden ------  */
