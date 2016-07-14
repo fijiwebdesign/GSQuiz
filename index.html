@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>German Shepherd Quiz!</title>
-    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<!-- gabe: good practice to close the html tags though it's not required -->
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'/>
 	<link rel="stylesheet" type="text/css" href="styles/style.css"/>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/Questions.js"></script>
@@ -17,7 +18,8 @@
 		<div class="frontpage">
 			<h1>German Shepherd Quiz</h1>
 			<div class="startQuiz">
-				<img id="introgspic" src="img/introgspic.png" alt="German Shepherds are the Best!"/>
+				<!-- gabe: using a link makes the cursor show a pointer on hover. -->
+				<a id="introgspic" href="#"><img src="img/introgspic.png" alt="German Shepherds are the Best!"/></a>
 				<img id="thoughtbubble" src="img/thoughtbubble2.png"/>
 			</div>
 		
@@ -32,7 +34,7 @@
 		</div>
 
 		<div class="question_area">
-			<form id="quesForm" name="quesForm" method="post" name="buttons"  onsubmit= "return false">
+			<form id="quesForm" name="quesForm" method="post" onsubmit= "return false">
 			<button class="qa" id="submit">Submit</button>
 			</form>
 		</div>
@@ -52,3 +54,4 @@
 
    
 </body>
+</html>
