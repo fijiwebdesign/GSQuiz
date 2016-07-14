@@ -1,12 +1,10 @@
 
-$(document).ready(function(){
-
 	var question1 = {
 	    pic: "img/gspic1.jpg",
 	    ask: "What is the alternative name for the German Shepherd?",
 	    choices: ["K9", "Alsatian", "Rommel", "Rin Tin Tin"],
 	    correntans: ["Alsatian"],
-	    info: "During World Wars I and II German Shepherds were often used in the war effort .This extremely intelligent breed served as messenger dogs, guard dogs. and search and 1escue animals.\
+	    info: "During World Wars I and II German Shepherds were often used in the war effort. This extremely intelligent breed served as messenger dogs, guard dogs. and search and 1escue animals.\
 	    	Fearing the anti-German sentiments prevalent in the U\.S.and England during World War I would spread to the dogs, officials began calling them Alsatians.  It was not until 1930 that the name German Shepherd was reestablished in England."
 	    }
 
@@ -20,7 +18,7 @@ $(document).ready(function(){
 
 	var question3 = {
 	    pic: "img/gspic3.jpg",
-	    ask: "According to the Amrican Kennel Club's list of most popu;ar dogs, the German Shepherd ranks in the top ten.",
+	    ask: "According to the American Kennel Club's list of most popular dogs, the German Shepherd ranks in the top ten.",
 	    choices: ["True", "False"],
 	    correntans: ["True"],
 	    info: "They are the fourth most popular dog in the U.S. with over 45,000 registered dogs. They are, in fact, well known and beloved throughout the world, ranking near the top of most popular dogs in several countries."
@@ -29,7 +27,7 @@ $(document).ready(function(){
 	var question4 = {
 	    pic: "img/gspic4.jpg",
 	    ask: "Which U.S. President owned a German Shepherd?",
-	    choices: ["git pushBill Clinton", "Richard Nixon", "Lyndon B. Johnson", "Franklin D. Roosevelt"],
+	    choices: ["Bill Clinton", "Richard Nixon", "Lyndon B. Johnson", "Franklin D. Roosevelt"],
 	    correntans: ["Franklin D. Roosevelt"],
 	    info: "Roosevelt owned a German Shepherd named Major. FDR was a great dog lover and had several pets throughout his life and presidential terms. Major does not seem to have been the most disciplined of dogs though. He once bit the visiting British Prime Minister Ramsey McDonald! Thankfully, no international crisis between the U.S. and Great Britain ensued."
 
@@ -43,7 +41,8 @@ $(document).ready(function(){
 	    info: "The Schutzhund was begun in Germany at the beginning of the 19th Century to evaluate the character of German Shepherds. As the show ringjudges appearance to see if the dog meets certain established standards, the Schutzhund judges behavior, hoping to determine if dogs have the qualities of a true German Shepherd. If the dog passes the test they are capable of a variety of tasks, including police work, odor detection, search and rescue, as well as others."
 	    }
 
-  };
-});
+
+	var questionList = [question1, question2, question3, question4, question5];
+
 
 

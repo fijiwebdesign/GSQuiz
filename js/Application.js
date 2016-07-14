@@ -1,10 +1,23 @@
 
 $(document).ready(function(){
 
-
+	$("#intro").fadeIn(2000);
 	$("#play_area").hide();
 	$("#done").hide();
 
+	$("#introgspic").click(function(){
+		
+	});
+
+
+(questionList).forEach(function(key, value) {
+	var currentQues = (ask, value)
+	var possibleAns = (choices, value) //each value in the choices key
+	$("#quesForm").append(<"li class="ask""> + currentQues + <"/li">) // the question
+
+	$("#choices").append(<"input id="choices" type="radio" name="group1" value="wrong""> + possibleAns + <"br">)
+
+})
 	
 
 
