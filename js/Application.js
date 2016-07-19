@@ -22,7 +22,7 @@ $(document).ready(function loaded (){
 
 	possibleAnswers.forEach(function answeranalysis (possibleAnswer) {
 
-		var value = correctAns == possibleAnswer ? 'right' : 'wrong';
+		var value = correctAns == possibleAnswer ? 'right' : 'wrong';f
 		 // gabe: added quotes around html string. listed each possibleAns
 	})
 
