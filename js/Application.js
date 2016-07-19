@@ -1,25 +1,29 @@
 
-$(document).ready(function(){
+$(document).ready(function loaded (){
 
 	$("#intro").fadeIn(2000);
 	$("#play_area").hide();
 	$("#done").hide();
 
-	$("#introgspic").click(function(e){
+	$("#introgspic").click(function introduction (e){
 		e.preventDefault(); // prevent the click from happening. 
 		$("#play_area").fadeIn(); // show play area
 		$("#intro").fadeOut(); // hide the intro
 	});
 
-
-(questionList).forEach(function(currentQues) { // each question in questionList Array
+	questionList.forEach(function presentquestion (currentQues) { // each question in questionList Array
+	
 	var possibleAnswers = currentQues.choices; // gabe: Array of choices for current question. Alternative syntax is: currentQues['choices']
+	
+	var correctAns = currentQues.correctans[0];
 	$("#quesForm").append('<li class="ask">' + currentQues.ask + '</li>') // the question. gabe: added quotes around html string
-
+	$("#quesForm").append('<input id="choices" type="radio">' + possibleAnswers + '<br>')
 	// gabe: iterate over each possibleAnswer
-	possibleAnswers.forEach(function(possibleAnswer) {
-		var value = correntans == possibleAnswer ? 'right' : 'wrong';
-		$("#choices").append('<input id="choices" type="radio" name="group1" value="' + value + '">' + possibleAnswer + '<br>') // gabe: added quotes around html string. listed each possibleAns
+
+	possibleAnswers.forEach(function answeranalysis (possibleAnswer) {
+
+		var value = correctAns == possibleAnswer ? 'right' : 'wrong';
+		 // gabe: added quotes around html string. listed each possibleAns
 	})
 
 })
