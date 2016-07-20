@@ -13,11 +13,10 @@ $(document).ready(function loaded (){
 		e.preventDefault(); // prevent the click from happening. 
 		$("#intro").fadeOut(); // hide the intro
 		$("#play_area").fadeIn(); // show play area
-		$(".answer_area").hide();
+		$("#answer_area").hide();
 	});
 
 	//Play area
-
 	//Ask user a question
 	
 	var totalQuestions = questionList.length;
@@ -27,40 +26,34 @@ $(document).ready(function loaded (){
 			$("#questions").append('<input id="choices" type="radio">' + ansChoice + '<br>')
 			});
 
-	displayTheQues;
-	displayAnsChoices;
+
+	// displayTheQues;
+	// displayAnsChoices;
 
 	//User Submits Answer
 
-	var uponSubmit = $(#subbtn).click(function checkAns (){
-			$("#play_area").hide; // show play area
-			$(".answer_area").show();
+	var uponSubmit = $("#subbtn").click(function checkAns (){
+			$("#question_area").hide(); 
+			$("#answer_area").show();
 			
-			var correctAns = currentQues.correctans[0];
+			var chosenAns = $("input[id='choices']:checked").val();
+			var correctAnswer = currentQues.correctAns[0];
 
-			currentQues.choices.forEach(function compareAns (ansChoice){
-				if (ansChoice == correctAns) {
-
+				if (chosenAns == correctAnswer) {
+					$("#answer").text("You are correct!");
+					$("#facts").append(currentQues.info);
 				}
+
 				else {
-
+					$("#answer").append("Sorry, you are incorrect.  The correct answer is " + correctAnswer);
+					$("#facts").append(currentQues.info);
 				}
-
-			} )
-
 		})
-
-
-
 
 	// User clicks for next question
-	var uponNext = $(#nextbtn).click(function nextQues (){
-			$()
-			
+	var uponNext = $("#nextbtn").click(function nextQues (){
+			$()	
 		})
-
-
-
 
 
 	var quesLoop = 
@@ -68,49 +61,9 @@ $(document).ready(function loaded (){
 	displayAnsChoices.fadeIn();
 	uponSubmit;
 	uponNext;
+
+	
 		 
-
-		
-		
-		
-
-
-	
-
-	//Answer area
-		
-		
-
-	 // gabe: Array of choices for current question. Alternative syntax is: currentQues['choices']
-	
-
-	 // the question. gabe: added quotes around html string
-	
-	// gabe: iterate over each possibleAnswer
-
-	// possibleAnswers.forEach(function answeranalysis (possibleAnswer) {
-
-		// var value = correctAns == possibleAnswer ? 'right' : 'wrong';
-		 // gabe: added quotes around html string. listed each possibleAns
-	
 
 })
 	
-
-
-	/* ----- when shepherd clicked, play_area id shown, question_area and header classes shown, others hidden ------  */
-				/* ----- question counter needs to be coded ------  */
-				/* ----- first question displayed w choices ------  */
-
-	/* ----- when submit button pushed, answer_area class comes in ------  */
-			/*need to code evaluation of answers against one another*/
-			/* ----- Next Question button hit moves on to new question removes old ques------  */
-
-	/* ----- when submit pushed on last question, done class displayed------  */
-
-			/* ----- play again button refreshes game ------  */
-
-
-});
-
-
