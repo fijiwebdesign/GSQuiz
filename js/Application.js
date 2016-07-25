@@ -19,7 +19,8 @@ $(document).ready(function loaded (){
 	//Play area
 	//Ask user a question
 	
-	var totalQuestions = questionList.length;
+	// var totalQuestions = questionList.length;
+	var lastQuestion = questionList[4];
 	var currentQues = questionList[0];
 	var displayTheQues = $("#questions").append('<li class="ask">' + currentQues.ask + '</li>');
 	var displayAnsChoices = currentQues.choices.forEach(function getEachAnsChoice (ansChoice) {
@@ -49,23 +50,18 @@ $(document).ready(function loaded (){
 	// User clicks for next question
 	var uponNext = $("#nextbtn").click(function nextQues (){
 		$("#answer_area").fadeOut();
-		var curQuesIndex = ;
-			
-		if (curQuesIndex + 1) <= totalQuestions {
-			$("#question_area").fadeIn();
-			currentQues = currentQues++;			
-			displayTheQues;
-			displayAnsChoices;
+
+		if (lastQuestion == currentQuestion) {
+				$("#done").fadeIn();
+			$("#rsbtn").click(function playAgain (){
+				location.reload();
+			})
 		}
 		
 		else {
-			$("#done").fadeIn();
-			$("#rsbtn").click(function playAgain (){
-				location.reload();
-			} 
-			
-				
-			});
+			alert("boyya");
+			}		
+	});
 
 
 
