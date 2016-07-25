@@ -25,12 +25,7 @@ $(document).ready(function loaded (){
 	var displayAnsChoices = currentQues.choices.forEach(function getEachAnsChoice (ansChoice) {
 			$("#questions").append('<input id="choices" type="radio">' + ansChoice + '<br>')
 			});
-
-
-	// displayTheQues;
-	// displayAnsChoices;
-
-	//User Submits Answer
+	var numCorrect = 0
 
 	var uponSubmit = $("#subbtn").click(function checkAns (){
 			$("#question_area").hide(); 
@@ -42,26 +37,45 @@ $(document).ready(function loaded (){
 				if (chosenAns == correctAnswer) {
 					$("#answer").text("You are correct!");
 					$("#facts").append(currentQues.info);
+					$("#numQuesCorrect").html(numCorrect += 1);
 				}
 
 				else {
 					$("#answer").append("Sorry, you are incorrect.  The correct answer is " + correctAnswer);
 					$("#facts").append(currentQues.info);
 				}
-		})
+		});
 
 	// User clicks for next question
 	var uponNext = $("#nextbtn").click(function nextQues (){
-			$()	
-		})
+		$("#answer_area").fadeOut();
+		var curQuesIndex = ;
+			
+		if (curQuesIndex + 1) <= totalQuestions {
+			$("#question_area").fadeIn();
+			currentQues = currentQues++;			
+			displayTheQues;
+			displayAnsChoices;
+		}
+		
+		else {
+			$("#done").fadeIn();
+			$("#rsbtn").click(function playAgain (){
+				location.reload();
+			} 
+			
+				
+			});
 
 
+
+/*
 	var quesLoop = 
 	displayTheQues.fadeIn();
 	displayAnsChoices.fadeIn();
 	uponSubmit;
 	uponNext;
-
+*/
 	
 		 
 
