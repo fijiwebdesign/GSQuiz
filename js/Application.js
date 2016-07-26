@@ -21,18 +21,19 @@ $(document).ready(function loaded (){
 	
 	// var totalQuestions = questionList.length;
 	var lastQuestion = questionList[4];
-	var currentQues = questionList[0];
+	var currentQuesIndex = 0;
+	var currentQues = questionList[currentQuesIndex];
 	var displayTheQues = $("#questions").append('<li class="ask">' + currentQues.ask + '</li>');
 	var displayAnsChoices = currentQues.choices.forEach(function getEachAnsChoice (ansChoice) {
-			$("#questions").append('<input id="choices" type="radio">' + ansChoice + '<br>')
+			$("#questions").append('<input name="choices" type="radio" value="ansChoice">' + ansChoice + '<br>')
 			});
-	var numCorrect = 0
+	var numCorrect = 0;
 
 	var uponSubmit = $("#subbtn").click(function checkAns (){
 			$("#question_area").hide(); 
 			$("#answer_area").show();
 			
-			var chosenAns = $("input[id='choices']:checked").val();
+			var chosenAns = $("input[name='choices' type='radio']:checked").val();
 			var correctAnswer = currentQues.correctAns[0];
 
 				if (chosenAns == correctAnswer) {
@@ -51,7 +52,7 @@ $(document).ready(function loaded (){
 	var uponNext = $("#nextbtn").click(function nextQues (){
 		$("#answer_area").fadeOut();
 
-		if (lastQuestion == currentQuestion) {
+		if (lastQuestion == currentQues) {
 				$("#done").fadeIn();
 			$("#rsbtn").click(function playAgain (){
 				location.reload();
@@ -59,7 +60,9 @@ $(document).ready(function loaded (){
 		}
 		
 		else {
-			alert("boyya");
+			currentQuesIndex++;
+			displayTheQues;
+			displayAnsChoices;
 			}		
 	});
 
