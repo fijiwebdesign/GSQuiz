@@ -23,11 +23,23 @@ $(document).ready(function loaded (){
 	var lastQuestion = questionList[4];
 	var currentQuesIndex = 0;
 	var currentQues = questionList[currentQuesIndex];
-	var displayTheQues = $("#questions").append('<li class="ask">' + currentQues.ask + '</li>');
-	var displayAnsChoices = currentQues.choices.forEach(function getEachAnsChoice (ansChoice) {
-			$("#questions").append('<input name="choices" type="radio" value="ansChoice">' + ansChoice + '<br>')
-			});
+
+	var displayTheQues = function() {
+		$("#questions").append('<li class="ask">' + currentQues.ask + '</li>');
+	};
+
+	var displayAnsChoices = function() {
+		currentQues.choices.forEach(function getEachAnsChoice (ansChoice) {
+				$("#questions").append('<input name="choices" type="radio" value="' + ansChoice + '">' + ansChoice + '<br>')
+				});
+	};
+
 	var numCorrect = 0;
+
+	$("#questions").append('<li class="ask">' + currentQues.ask + '</li>');
+
+	displayTheQues();
+	displayAnsChoices();
 
 	var uponSubmit = $("#subbtn").click(function checkAns (){
 			$("#question_area").hide(); 
@@ -61,8 +73,9 @@ $(document).ready(function loaded (){
 		
 		else {
 			currentQuesIndex++;
-			displayTheQues;
-			displayAnsChoices;
+			currentQues = questionList[currentQuesIndex];
+			displayTheQues();
+			displayAnsChoices();
 			}		
 	});
 
